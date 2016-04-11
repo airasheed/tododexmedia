@@ -10,10 +10,10 @@
      */
     angular
         .module('todoDexMediaApp')
-        .factory('todoService', todoService);
+        .factory('TodoService', TodoService);
 
 
-    function todoService() {
+    function TodoService() {
 
         var todos = {
             list: [],

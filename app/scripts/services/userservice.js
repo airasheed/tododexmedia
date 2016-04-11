@@ -10,9 +10,9 @@
      */
     angular
         .module('todoDexMediaApp')
-        .factory('userService', userService);
+        .factory('UserService', UserService);
 
-    function userService () {
+    function UserService () {
         var user = {
             logIn: logIn,
             logOut: logOut,
@@ -31,6 +31,7 @@
             user.name = name;
             user.email = email;
             user.password = password;
+            user.loggedIn = true;
         }
 
         function logIn(email,password){

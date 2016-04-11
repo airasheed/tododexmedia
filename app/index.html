@@ -5,6 +5,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
@@ -15,23 +16,38 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="todoDexMediaApp">
+  <body ng-app="todoDexMediaApp" ng-controller="MainController" ng-class="{'sign-in':!user.loggedIn}">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">todoDexMedia</h3>
-      </div>
+    <!--If User is logged ing-->
+    <div ng-if="!user.loggedIn" class="container-fluid sign-in">
+      <dex-sign-up></dex-sign-up>
+    </div>
 
-      <div ng-view=""></div>
+    <!--Main Site body-->
+    <div ng-if="user.loggedIn" class="container-fluid" >
+      <nav class="navbar header" role="navigation">
+        <div class="navbar-header">
+          <span class="navbar-brand">Hi, {{user.name}}</span>
+        </div>
+        <div class="nav navbar-right">
+          <button class="btn-primary pull-right panel-btn">
+            <span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>
+          </button>
+        </div>
+      </nav>
+      <!--Main Logo Header-->
+      <div class="container">
+        <div class="sign-in-logo"></div>
+        <div class="view-toggle">
+          <a href="#/" ng-class="{active:isActive('/')}">Todo</a> | <a href="#/completed"
+                                                                      ng-class="{active:isActive('/completed')}">
+          Completed</a>
+        </div>
+        <div ng-view=""></div>
+      </div>
 
       <div class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
@@ -78,6 +94,8 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/userservice.js"></script>
         <script src="scripts/services/todoservice.js"></script>
+        <script src="scripts/controllers/maincontroller.js"></script>
+        <script src="scripts/directives/dexsignup.js"></script>
         <!-- endbuild -->
 </body>
 </html>

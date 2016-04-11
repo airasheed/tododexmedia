@@ -1,0 +1,16 @@
+<div class="wrapper">
+  <form class="form-sign-in" name="signIn">
+    <div class="sign-in-logo"></div>
+    <h2 class="form-sign-in-heading">Sign Up</h2>
+    <input type="text" class="form-control name-control" name="name" placeholder="Name" ng-model="user.name">
+    <input type="text" class="form-control email-control" name="username" placeholder="Email Address"
+           ng-model="user.email">
+    <input type="password" class="form-control password-control" name="password" placeholder="Password"
+           ng-model="user.password"
+           required="">
+    <button class="btn btn-lg btn-primary btn-block btn-create-account" type="submit"
+            ng-click="signUp(user)">Create an
+      Account</button>
+    <div class="dex-tag">By Dex Media</div>
+  </form>
+</div>
