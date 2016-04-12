@@ -1,4 +1,4 @@
-/*
+/**
  * Main Controller
  * @namespace Controllers
  * */
@@ -12,7 +12,7 @@
 
     MainController.$inject = ['$scope', '$location','$timeout','UserService'];
 
-  /*
+  /**
    * @namespace MainController
    * @desc Application Wide Controller. Controls application wide functions, like user authentication.
    * @memberOf Controllers
@@ -31,7 +31,7 @@
 
       /////////////////////////// Implementation Details
 
-      /*
+    /**
        * @name logOut
        * @desc Checks current routes and sets active
        * @param route Current route
@@ -44,7 +44,7 @@
         }, 100);
       }
 
-      /*
+    /**
        * @name isActive
        * @desc Checks current routes and sets active
        * @param route Current route
@@ -54,7 +54,7 @@
         return route === $location.path();
       }
 
-      /*
+    /**
        * @name toggle
        * @desc Changes toggle state for pageslide
        * @memberOf Controllers.MainController

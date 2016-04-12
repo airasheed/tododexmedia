@@ -1,7 +1,8 @@
-/*
+/**
 * Main Module
 * @namespace Modules
-* */
+*
+*/
 (function () {
   'use strict';
 

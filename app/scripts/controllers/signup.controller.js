@@ -1,4 +1,4 @@
-/*
+/**
  * Sign Up Controller
  * @namespace Controllers
  * */
@@ -12,7 +12,7 @@
 
   SignUpController.$inject = ['$scope', 'UserService'];
 
-  /*
+  /**
    * @namespace SignUpController
    * @desc Exposes an API for users to Sign Up
    * @memberOf Controllers
@@ -26,13 +26,16 @@
 
     ////////////////////////////////// Implementation Details
 
-    /*
+    /**
      * @name signUp
      * @desc Creates new user
      * @params {Object} user User object passed to UserService
      * @memberOf Controllers.SignUpController
      * */
     function signUp(user) {
+      if(!user.name || !user.email || !user.password) {
+        return;
+      }
       UserService.createUser(user.name, user.email, user.password);
     }
   }

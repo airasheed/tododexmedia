@@ -1,6 +1,6 @@
 'use strict';
 
-/*
+/**
  * Dex To Do Directive
  * @namespace Directives
  * */
@@ -10,7 +10,7 @@ angular.module('todoDexMediaApp')
 
 DexTodo.$inject = ['$location'];
 
-/*
+/**
  * @namespace DexTodo
  * @desc Reusable sign up form that can be used to create new users
  * @memberOf Directives

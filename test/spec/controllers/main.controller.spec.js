@@ -16,7 +16,14 @@ describe('Controller: MainController', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.user.loggedIn).toBe(false);
+  it('should close sliding panel', function () {
+    scope.checked = true;
+    scope.toggle();
+    expect(scope.checked).toBe(false);
+  });
+
+  it('User should be logged in', function () {
+    scope.user.loggedIn = true;
+    expect(scope.user.loggedIn).toBe(true);
   });
 });

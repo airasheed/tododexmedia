@@ -7,12 +7,12 @@ describe('Service: todoService', function () {
 
   // instantiate service
   var todoService;
-  beforeEach(inject(function (_todoService_) {
-    todoService = _todoService_;
+  beforeEach(inject(function (_TodoService_) {
+    todoService = _TodoService_;
   }));
 
   it('should do something', function () {
-    expect(!!todoService).toBe(true);
+    expect(!!todoService).toBeTruthy();
   });
 
 });

@@ -14,11 +14,14 @@
           ng-click="changeStatus(todo)"></span>
     <input type="text" readonly="readonly" ng-model="todo.title"/>
     <span class="todo-item-trash pull-right" ng-click="remove(todo)"></span>
-    <button class="todo-item-more btn-round btn-primary-inverse pull-right" ng-click="toggle()">...</button>
-    <!--Pageslider - For Detailed Edits-->
-    <pageslide ps-open="checked" ps-speed="0.1">
+
+
+    <!--Pageslider - For Detailed Edits - Had to hold feature off because of bug-->
+
+    <!--<button class="todo-item-more btn-round btn-primary-inverse pull-right" ng-click="toggle()">...</button>-->
+    <!--<pageslide ps-open="checked" ps-speed="0.1">
       <div class="container-pageslide">
-        <!--Back Button Wrapper-->
+        &lt;!&ndash;Back Button Wrapper&ndash;&gt;
         <div class="container-back">
           <div class="pull-left">
             <i class="glyphicon glyphicon-chevron-left"></i>
@@ -27,22 +30,22 @@
           <span class="todo-item-trash todo-item-trash-white pull-right" ng-click="remove()"></span>
 
         </div>
-        <!--Due Date-->
+        &lt;!&ndash;Due Date&ndash;&gt;
         <div class="form-group">
           <label class="todo-item-label todo-item-due-date">What do you need to do?</label>
           <input type="text" class="form-control" ng-model="todo.title"/>
         </div>
-        <!--Due Date-->
+        &lt;!&ndash;Due Date&ndash;&gt;
         <div class="form-group">
           <label class="todo-item-label todo-item-due-date">Due Date</label>
           <input type="text" class="form-control" ng-model="todo.due"/>
         </div>
-        <!--Note-->
+        &lt;!&ndash;Note&ndash;&gt;
         <div class="form-group">
           <label class="todo-item-label todo-item-note">Note</label>
           <textarea type="text" class="form-control" placeholder="Write a note..." ng-model="todo.note"></textarea>
         </div>
       </div>
-    </pageslide>
+    </pageslide>-->
   </div>
 </div>

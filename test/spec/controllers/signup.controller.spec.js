@@ -16,7 +16,25 @@ describe('Controller: SignUpController', function () {
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(!!scope.user).toBe(true);
+  it('Should create user and login', function () {
+    scope.signUp({name: 'Jeff', email: 'jeff@dexmedia.com', password: 'jeff1'});
+    expect(!!scope.user.loggedIn).toBe(true);
   });
+
+  it('Should prevent account creation with out name', function () {
+    scope.signUp({name: '', email: 'jeff@dexmedia.com', password: 'jeff1'});
+    expect(!!scope.user.loggedIn).toBe(false);
+  });
+
+  it('Should prevent account creation with out email', function () {
+    scope.signUp({name: 'Jeff', email: '', password: 'jeff1'});
+    expect(!!scope.user.loggedIn).toBe(false);
+  });
+
+  it('Should prevent account creation with out password', function () {
+    scope.signUp({name: '', email: 'jeff@dexmedia.com', password: ''});
+    expect(!!scope.user.loggedIn).toBe(false);
+  });
+
+
 });
