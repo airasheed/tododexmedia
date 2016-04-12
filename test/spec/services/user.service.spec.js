@@ -7,12 +7,12 @@ describe('Service: userService', function () {
 
   // instantiate service
   var userService;
-  beforeEach(inject(function (_userService_) {
-    userService = _userService_;
+  beforeEach(inject(function (_UserService_) {
+    userService = _UserService_;
   }));
 
   it('should do something', function () {
-    expect(!!userService).toBe(true);
+    expect(!!userService).toBeTruthy();
   });
 
 });

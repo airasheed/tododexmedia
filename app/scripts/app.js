@@ -1,33 +1,34 @@
-'use strict';
-
 /**
- * @ngdoc overview
- * @name todoDexMediaApp
- * @description
- * # todoDexMediaApp
- *
- * Main module of the application.
- */
-angular
-  .module('todoDexMediaApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
+* Main Module
+* @namespace Modules
+*
+*/
+(function () {
+  'use strict';
+
+  angular
+    .module('todoDexMediaApp', [
+      'ngAnimate',
+      'ngCookies',
+      'ngResource',
+      'ngRoute',
+      'ngSanitize',
+      'ngTouch',
+      'pageslide-directive'
+    ])
+    .config(Config);
+
+  Config.$inject = ['$routeProvider'];
+  function Config ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/main.view.html'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/completed', {
+        templateUrl: 'views/completed.view.html'
       })
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }
+})();

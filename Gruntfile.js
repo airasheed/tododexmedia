@@ -21,6 +21,7 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+  grunt.loadNpmTasks('grunt-jsdoc');
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -350,6 +351,15 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'test/karma.conf.js',
         singleRun: true
+      }
+    },
+
+    jsdoc : {
+      dist : {
+        src: ['app/scripts/**/*.js'],
+        options: {
+          destination: 'doc'
+        }
       }
     }
   });

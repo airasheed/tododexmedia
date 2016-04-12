@@ -1,7 +1,30 @@
+/********************************
+* Global Elements
+*******************************/
+
 /* Space out content a bit */
 body {
-  padding-top: 20px;
   padding-bottom: 20px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/*Placeholder text styling*/
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #E5ECF2;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #E5ECF2;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #E5ECF2;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #E5ECF2;
+}
+
+.container-fluid {
+  padding-left:0;
+  padding-right:0;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -14,7 +37,11 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  /* Rectangle 6 Copy 2: */
+  background: #262A34;
+  border-radius:0;
+  box-shadow: 0 2px 3px 0 rgba(0,0,0,0.50);
+  color:#fff;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -26,38 +53,287 @@ body {
 
 /* Custom page footer */
 .footer {
+  margin-top: 50px;
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
 
-/* Customize container */
+.btn-primary{
+  background: #52C0E8;
+  border: 1px solid #E5ECF2;
+  border-radius: 3px;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open > .dropdown-toggle.btn-primary{
+  background: #3FA2C5;
+  border: 1px solid #3B3C40;
+}
+.btn-primary-inverse{
+  background: #FFFFFF;
+  color:#52C0E8;
+  border: 1px solid #E8E8E8;
+}
+.btn-primary-inverse:hover,
+.btn-primary-inverse:focus,
+.btn-primary-inverse:active,
+.btn-primary-inverse.active,
+.open > .dropdown-toggle.btn-primary-inverse{
+  background: #262A34;
+  border: 1px solid #3FA2C5;
+  color:#fff;
+}
+.btn-create-account{
+  margin-top:15px;
+}
+.btn-round {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 0;
+}
+
+
+/********************************
+* Containers
+*******************************/
+.container-pageslide{
+}
+.container-pageslide-content {
+  padding:20px 40px;
+}
+.container-back {
+  display: block;
+  height:50px;
+  padding: 20px;
+  background: #52C0E8;
+  color: #fff;
+}
+.container-add-todo{
+  position:relative;
+}
+/********************************
+* Sign In
+*******************************/
+
+/*Sign In Directive Styling*/
+.sign-in{
+  background: #262A34;
+  height:100%;
+  width:100%;
+}
+.sign-in-logo{
+  background-image:url('../images/logo.png');
+  display:block;
+  width:136px;
+  height:136px;
+  margin: 24px auto 10px;
+  -webkit-background-size:contain;
+  background-size:contain;
+}
+
+.form-sign-in {
+  max-width: 380px;
+  padding: 15px 67px 45px;
+  margin: 100px auto;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-sign-in > .form-control{
+  background:no-repeat 9px 13px;
+  height:40px;
+  padding-left:32px;
+  background-size: 14px 14px;
+}
+.name-control.form-control {
+  background-image: url('../images/name-form-icon.png');
+  -webkit-border-radius: 3px 3px 0 0;
+  -moz-border-radius: 3px 3px 0 0;
+  border-radius: 3px 3px 0 0;
+}
+
+.email-control.form-control {
+  background-image: url('../images/email-form-icon.png');
+  -webkit-border-radius: 0 0 0 0;
+  -moz-border-radius: 0 0 0 0;
+  border-radius: 0 0 0 0;
+  border-bottom:none;
+  border-top:none;
+}
+
+.password-control.form-control{
+  background-image:url('../images/password-form-icon.png');
+  -webkit-border-radius:0 0 3px 3px;
+  -moz-border-radius:0 0 3px 3px;
+  border-radius:0 0 3px 3px;
+}
+
+.form-sign-in-heading{
+  font-size:18px;
+  text-align:center;
+}
+
+.form-sign-in-heading,
+.checkbox {
+  margin-bottom: 30px;
+}
+
+
+.form-control{
+  background: #FFFFFF;
+  border: 1px solid #E5ECF2;
+}
+
+
+/********************************
+* To Do Toggle Display
+*******************************/
+
+.dex-tag{
+  font-size: 10px;
+  font-weight:bold;
+  color: #262A34;
+  margin-top:12px;
+  text-align: center;
+}
+
+.panel-btn {
+  height: 50px;
+  width: 50px;
+  border: none;
+  border-radius: 0;
+}
+
+/* Main Display */
+.view-toggle {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 32px;
+  font-size: 36px;
+}
+
+.view-toggle a {
+  color:#262A34;
+  text-decoration:none;
+}
+
+.view-toggle a.active{
+  color:#52C0E8;
+  text-decoration: none;
+  box-shadow: inset 0 -1px 0 0 #fff, inset 0 -3px 0 0 rgba(82,192,232,0.2);
+}
+
+
+/********************************
+* To Do Controls
+*******************************/
+
+.add-todo-control{
+  background: #FFFFFF;
+  border: 1px solid #E5ECF2;
+  box-shadow: 0 3px 21px 0 rgba(0,0,0,0.08);
+  border-radius: 3px;
+  height:60px;
+  background: url('../images/add-todo-icon.png') 10px 22px/15px 15px no-repeat;
+  padding-left:35px;
+  margin:0 auto 30px;
+}
+
+
+.btn-add-todo-details {
+  position: absolute;
+  right: 17px;
+  top: 17px;
+}
+
+
+/********************************
+* To Do Items
+*******************************/
+
+.todo-item input {
+  font-size: 18px;
+  color: #262A34;
+  width: 80%;
+  border: none;
+  margin-left: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.dex-todo.completed .todo-item input {
+  text-decoration: line-through;
+}
+.todo-item {
+  background: #FFFFFF;
+  border: 1px solid #E5ECF2;
+  height: 60px;
+  margin: 0 auto;
+  padding: 16px;
+}
+.todo-item:first-child {
+   border-radius: 3px 3px 0 0;
+}
+.todo-item:last-child {
+  border-radius: 0 0 3px 3px;
+}
+.todo-item-checkbox{
+  cursor: pointer;
+}
+.dex-todo.active .todo-item-checkbox{
+   background: url('../images/checkbox-active.png');
+   height: 16px;
+   margin-top: 5px;
+   width: 16px;
+ }
+
+.dex-todo.active .todo-item-checkbox:hover,.dex-todo.completed .todo-item-checkbox {
+  background: url('../images/checkbox-completed-icon.png');
+  height: 20px;
+  margin-top: 5px;
+  width: 20px;
+}
+.todo-item-trash {
+  background: url('../images/trash-icon.png') no-repeat center;
+  height: 28px;
+  width: 26px;
+  margin-top: 2px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.todo-item-trash:hover {
+  background: url('../images/trash-icon-hover.png') no-repeat center;
+}
+.todo-item-trash.todo-item-trash-white{
+  background: url('../images/trash-icon-white.png') no-repeat center;
+  margin-top:-4px;
+}
+.ng-pageslide{
+  background:#fff;
+  box-shadow: 0 2px 15px 0 rgba(0,0,0,0.05);
+}
+
+.todo-amounts{
+  text-align:center;
+  margin-bottom:20px;
+}
+.todo-amounts strong{
+  font-weight:bold;
+  color:#52C0E8;
+}
+
+/********************************
+* Responsive Styling
+*******************************/
 @media (min-width: 768px) {
   .container {
     max-width: 730px;
   }
 }
-.container-narrow > hr {
-  margin: 30px 0;
-}
 
-/* Main marketing message and sign up button */
-.jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-}
-.jumbotron .btn {
-  font-size: 21px;
-  padding: 14px 24px;
-}
-
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-}
-.marketing p + h4 {
-  margin-top: 28px;
-}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
@@ -67,13 +343,28 @@ body {
   .footer {
     padding-left: 0;
     padding-right: 0;
+    text-align:center;
   }
   /* Space out the masthead */
   .header {
     margin-bottom: 30px;
   }
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
+}
+/* Responsive: Mobile */
+@media (max-width: 768px){
+
+  .add-todo-control {
+    width: 100%;
+    height: 50px;
+    background: url('../images/add-todo-icon.png') 10px 19px/10px 10px no-repeat;
+  }
+  .todo-item input{
+    width:60%;
+  }
+  .navbar-header{
+    width:60%;
+  }
+  .navbar{
+    padding:0;
   }
 }

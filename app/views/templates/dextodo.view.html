@@ -1,0 +1,51 @@
+<div class="todo-amounts">
+  <span>To do: <strong>{{remaining}}</strong> | Completed: <strong>{{completed}}</strong></span>
+</div>
+
+<form class="container-add-todo" ng-submit="save()" ng-hide="statusFilter.completed">
+  <input type="text" class="form-control add-todo-control" placeholder="Add a to-do..." ng-model="newTodo"/>
+  <button ng-href="" class="btn-round btn-primary btn-add-todo-details">...</button>
+</form>
+
+<div class="container-todo-list" ng-class="{active: statusFilter.completed}">
+  <div ng-repeat="todo in todos | filter: statusFilter track by $index "
+       class="todo-item todo-item-active" ng-class="{todoClass: active}">
+    <span class="todo-item-checkbox todo-item-checkbox-active pull-left"
+          ng-click="changeStatus(todo)"></span>
+    <input type="text" readonly="readonly" ng-model="todo.title"/>
+    <span class="todo-item-trash pull-right" ng-click="remove(todo)"></span>
+
+
+    <!--Pageslider - For Detailed Edits - Had to hold feature off because of bug-->
+
+    <!--<button class="todo-item-more btn-round btn-primary-inverse pull-right" ng-click="toggle()">...</button>-->
+    <!--<pageslide ps-open="checked" ps-speed="0.1">
+      <div class="container-pageslide">
+        &lt;!&ndash;Back Button Wrapper&ndash;&gt;
+        <div class="container-back">
+          <div class="pull-left">
+            <i class="glyphicon glyphicon-chevron-left"></i>
+            <span class="pageslide-back" ng-click="toggle()">Back</span>
+          </div>
+          <span class="todo-item-trash todo-item-trash-white pull-right" ng-click="remove()"></span>
+
+        </div>
+        &lt;!&ndash;Due Date&ndash;&gt;
+        <div class="form-group">
+          <label class="todo-item-label todo-item-due-date">What do you need to do?</label>
+          <input type="text" class="form-control" ng-model="todo.title"/>
+        </div>
+        &lt;!&ndash;Due Date&ndash;&gt;
+        <div class="form-group">
+          <label class="todo-item-label todo-item-due-date">Due Date</label>
+          <input type="text" class="form-control" ng-model="todo.due"/>
+        </div>
+        &lt;!&ndash;Note&ndash;&gt;
+        <div class="form-group">
+          <label class="todo-item-label todo-item-note">Note</label>
+          <textarea type="text" class="form-control" placeholder="Write a note..." ng-model="todo.note"></textarea>
+        </div>
+      </div>
+    </pageslide>-->
+  </div>
+</div>
