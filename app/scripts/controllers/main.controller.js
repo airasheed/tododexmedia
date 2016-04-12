@@ -33,8 +33,7 @@
 
     /**
        * @name logOut
-       * @desc Checks current routes and sets active
-       * @param route Current route
+       * @desc Logs user out and closes side panel
        * @memberOf Controllers.MainController
        * */
       function logOut() {
