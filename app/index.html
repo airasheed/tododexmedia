@@ -46,8 +46,11 @@
             <div class="container-back">
               <div class="pull-left" ng-click="toggle()">
                 <i class="glyphicon glyphicon-chevron-left"></i>
-                <span class="pageslide-back">Back</span>
+                <a href="" class="pageslide-back">Back</a>
               </div>
+            </div>
+            <div class="container-pageslide-content">
+              <span ng-click="logOut()"><a href="">Logout</a></span>
             </div>
           </div>
         </pageslide>
@@ -66,7 +69,7 @@
 
       <!--Footer with love...-->
       <div class="footer">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Abdullah Rasheed to Dex Media</p>
+        <p><span class="glyphicon glyphicon-heart"></span> from Abdullah Rasheed to Dex Media</p>
       </div>
     </div>
 
@@ -100,9 +103,10 @@
         <script src="scripts/services/todo.service.js"></script>
         <script src="scripts/controllers/main.controller.js"></script>
         <script src="scripts/controllers/todo.controller.js"></script>
+        <script src="scripts/controllers/signup.controller.js"></script>
         <script src="scripts/directives/dexsignup.directive.js"></script>
         <script src="scripts/directives/dextodo.directive.js"></script>
-        <script src="scripts/controllers/dexsignupcontroller.js"></script>
+
         <!-- endbuild -->
 </body>
 </html>

@@ -1,22 +1,22 @@
 'use strict';
 
-describe('Controller: TodocontrollerCtrl', function () {
+describe('Controller: MainController', function () {
 
   // load the controller's module
   beforeEach(module('todoDexMediaApp'));
 
-  var TodocontrollerCtrl,
+  var MainController,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    TodocontrollerCtrl = $controller('TodocontrollerCtrl', {
+    MainController = $controller('MainController', {
       $scope: scope
     });
   }));
 
   it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+    expect(scope.user.loggedIn).toBe(false);
   });
 });
