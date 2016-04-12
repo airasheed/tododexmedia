@@ -5,12 +5,16 @@ Home work Assignment Submission
 #### Planning Resources ####
 
 **Invision App Prototypes**
-You can find the wireframes and UI designs that I created for planning purposes prior to developing in Angular here:
-Wireframe - [Mobile](https://invis.io/EJ6WUWJBY)
-Wireframe - [Desktop](https://invis.io/5E6WUXRZH)
 
-UI Prototype - [Mobile](https://invis.io/VP6WUY8Y4)
-UI Prototype - [Desktop](https://invis.io/8S6WUYMBH)
+You can find the wireframes and UI designs that I created for planning purposes prior to developing in Angular here:
+
+[Wireframe - Mobile](https://invis.io/EJ6WUWJBY)
+
+[Wireframe - Desktop](https://invis.io/5E6WUXRZH)
+
+[UI Prototype - Mobile](https://invis.io/VP6WUY8Y4)
+
+[UI Prototype - Desktop](https://invis.io/8S6WUYMBH)
 
 
 
